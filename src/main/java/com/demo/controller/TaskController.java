@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.HashMap;
@@ -14,6 +15,7 @@ import java.util.Map;
 import java.util.Objects;
 
 @Controller
+@RequestMapping("/")
 public class TaskController {
 
     private final FreeMarkerService freeMarkerService;
@@ -23,7 +25,8 @@ public class TaskController {
         this.freeMarkerService = freeMarkerService;
     }
 
-    @GetMapping("/")
+
+    @GetMapping("/showForm")
     public String showForm() {
         System.out.println("showing form...");
         return "taskForm";
