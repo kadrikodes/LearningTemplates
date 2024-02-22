@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 <html>
 <body>
 <h1>Task Details</h1>
